@@ -29,4 +29,8 @@ const handleScroll = () => {
   });
 };
 
+// Attach scroll event listener to window
 window.addEventListener("scroll", handleScroll);
+
+// Run the scroll animation once on page load
+document.addEventListener("DOMContentLoaded", handleScroll);
