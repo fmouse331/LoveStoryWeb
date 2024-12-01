@@ -1,6 +1,6 @@
 /* Basic Reset */
 body {
-  font-family: Arial, sans-serif; /* Default font */
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   color: #333;
@@ -18,7 +18,7 @@ body {
 }
 
 header h1 {
-  font-family: 'Montserrat', sans-serif; /* Header font */
+  font-family: 'Montserrat', sans-serif;
   font-size: 3em;
   opacity: 0;
   animation: fadeIn 2s forwards 0.5s;
@@ -83,8 +83,8 @@ header p {
   opacity: 1;
 }
 
-/* Milestones and Love Notes Sections */
-#milestones, #notes {
+/* Milestones Section */
+#milestones {
   padding: 20px;
   margin: 20px auto;
   max-width: 800px;
@@ -106,6 +106,13 @@ header p {
   border-radius: 10px;
   width: 200px;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.milestone-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .milestone-item h3 {
@@ -114,77 +121,42 @@ header p {
 }
 
 .milestone-item p {
-  font-size: 1.2em;
-  color: #333;
+  font-size: 1.1em;
 }
 
-/* Love Notes */
-#notes p {
-  font-size: 1.3em;
-  line-height: 1.8;
-  max-width: 800px;
-  margin: 20px auto;
+.milestone-icon {
+  width: 40px;
+  margin-bottom: 10px;
+  animation: bounce 1s infinite;
 }
 
-/* Footer */
-footer {
-  background-color: #f4f4f4;
+/* Bounce Animation for Icon */
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Love Notes Section */
+#notes {
   padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
   text-align: center;
-  font-size: 1em;
-  color: #333;
+  opacity: 0;
+  animation: fadeIn 2s forwards 3s;
 }
 
-footer p {
-  color: #ff7f50;
-  font-size: 1.2em;
+footer {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  animation: fadeIn 2s forwards 3.5s;
 }
 
 /* Fade-in Keyframes */
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  .photo-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .milestone-container {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .milestone-item {
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 2em;
-  }
-
-  .hero p {
-    font-size: 1em;
-  }
-
-  .photo-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .milestone-container {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .milestone-item {
-    max-width: 90%;
-  }
-
-  #notes p {
-    font-size: 1em;
-  }
 }
