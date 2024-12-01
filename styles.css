@@ -28,6 +28,18 @@ body {
   animation: fadeIn 2s ease-in-out;
 }
 
+/* Love Story Section */
+#story {
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  padding: 30px;
+  font-size: 1.4em;
+  background: #fff0f6;
+  border-radius: 15px;
+  margin: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 /* Photo Gallery */
 .photo-grid {
   display: grid;
@@ -76,6 +88,49 @@ body {
   transform: translateY(0);
 }
 
+/* Milestones Section */
+#milestones {
+  padding: 30px;
+  text-align: center;
+  background: #ffe6eb;
+  border-radius: 15px;
+  margin: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.milestone-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.milestone-item {
+  padding: 15px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.milestone-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+/* Love Notes Section */
+#notes {
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  padding: 30px;
+  font-size: 1.3em;
+  background: linear-gradient(to bottom, #ffccff, #ff99cc);
+  border-radius: 15px;
+  margin: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 /* Tap to See Cute Couple */
 #tap-to-see {
   text-align: center;
@@ -90,6 +145,7 @@ body {
   font-size: 1.2em;
   cursor: pointer;
   transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .cute-button:hover {
@@ -138,4 +194,14 @@ body {
   100% {
     transform: scale(1);
   }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  padding: 20px;
+  background: #ffe6eb;
+  color: #ff69b4;
+  font-size: 1.4em;
 }
