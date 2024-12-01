@@ -12,14 +12,23 @@ musicToggle.addEventListener('click', () => {
   }
 });
 
-// Show Cute Couple Image
+// Show Cute Couple Image with Animation
 const showImageButton = document.getElementById('showImageButton');
 const cuteCoupleImage = document.getElementById('cuteCoupleImage');
 
 showImageButton.addEventListener('click', () => {
-  cuteCoupleImage.classList.toggle('hidden');
+  if (cuteCoupleImage.classList.contains('hidden')) {
+    cuteCoupleImage.classList.remove('hidden', 'hidden-state');
+    cuteCoupleImage.classList.add('visible');
+  } else {
+    cuteCoupleImage.classList.remove('visible');
+    cuteCoupleImage.classList.add('hidden-state');
+    // Delay the hiding to allow fade-out animation
+    setTimeout(() => {
+      cuteCoupleImage.classList.add('hidden');
+    }, 500); // Match this to the fadeOut duration
+  }
 });
-
 // Scroll Animation for Photo Gallery
 const photoItems = document.querySelectorAll(".photo-item");
 
