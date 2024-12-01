@@ -14,27 +14,10 @@ musicToggle.addEventListener("click", () => {
   isPlaying = !isPlaying;
 });
 
-// Photo Modal
-const photos = document.querySelectorAll(".photo-item img");
-const modal = document.getElementById("photo-modal");
-const modalImage = document.getElementById("modal-image");
-const modalCaption = document.getElementById("modal-caption");
-const modalClose = document.getElementById("modal-close");
+// Tap to See Cute Couple
+const showImageButton = document.getElementById("showImageButton");
+const cuteCoupleImage = document.getElementById("cuteCoupleImage");
 
-photos.forEach(photo => {
-  photo.addEventListener("click", () => {
-    modal.style.display = "flex";
-    modalImage.src = photo.src;
-    modalCaption.textContent = photo.alt;
-  });
-});
-
-modalClose.addEventListener("click", () => {
-  modal.style.display = "none";
-});
-
-window.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.style.display = "none";
-  }
+showImageButton.addEventListener("click", () => {
+  cuteCoupleImage.classList.remove("hidden");
 });
