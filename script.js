@@ -1,17 +1,23 @@
-// Music Control
-const musicToggle = document.getElementById("music-toggle");
-const backgroundMusic = document.getElementById("background-music");
-let isPlaying = true;
+// Music Toggle
+const music = document.getElementById('background-music');
+const musicToggle = document.getElementById('music-toggle');
 
-musicToggle.addEventListener("click", () => {
-  if (isPlaying) {
-    backgroundMusic.pause();
-    musicToggle.textContent = "Play Music 🎶";
+musicToggle.addEventListener('click', () => {
+  if (music.paused) {
+    music.play();
+    musicToggle.textContent = 'Pause Music 🎶';
   } else {
-    backgroundMusic.play();
-    musicToggle.textContent = "Pause Music 🎶";
+    music.pause();
+    musicToggle.textContent = 'Play Music 🎶';
   }
-  isPlaying = !isPlaying;
+});
+
+// Show Cute Couple Image
+const showImageButton = document.getElementById('showImageButton');
+const cuteCoupleImage = document.getElementById('cuteCoupleImage');
+
+showImageButton.addEventListener('click', () => {
+  cuteCoupleImage.classList.toggle('hidden');
 });
 
 // Scroll Animation for Photo Gallery
