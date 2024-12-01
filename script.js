@@ -6,10 +6,10 @@ let isPlaying = true;
 musicToggle.addEventListener("click", () => {
   if (isPlaying) {
     backgroundMusic.pause();
-    musicToggle.textContent = "Play Music 🎵";
+    musicToggle.textContent = "Play Music 🎶";
   } else {
     backgroundMusic.play();
-    musicToggle.textContent = "Pause Music 🎵";
+    musicToggle.textContent = "Pause Music 🎶";
   }
   isPlaying = !isPlaying;
 });
