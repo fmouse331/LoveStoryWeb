@@ -4,15 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To Danica Mae Ronquillo, My Love</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Merriweather:wght@400;700&family=Roboto:wght@400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Background Music -->
-  <audio id="background-music" autoplay loop>
+  <audio id="background-music" loop>
     <source src="music.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
+  <button id="music-toggle" class="music-control">Play Music</button>
 
   <!-- Hero Section -->
   <header class="hero">
@@ -27,71 +28,60 @@
       <h2>Our Love Story</h2>
       <p>From the moment we met, my life changed forever...</p>
     </section>
-    
-  <!-- Photo Gallery Section -->
-<section id="gallery">
-  <h2>Photo Gallery</h2>
-  <div class="photo-grid">
-    <div class="photo-item">
-      <img src="photo1.jpg" alt="Danica Mae Ronquillo - Photo 1" class="professional-img">
-      <div class="caption">
-        <p>The day we met, forever in my heart.</p>
-      </div>
-    </div>
-    <div class="photo-item">
-      <img src="photo2.jpg" alt="Danica Mae Ronquillo - Photo 2" class="professional-img">
-      <div class="caption">
-        <p>Our first date - a moment I'll never forget.</p>
-      </div>
-    </div>
-    <div class="photo-item">
-      <img src="photo3.jpg" alt="Danica Mae Ronquillo - Photo 3" class="professional-img">
-      <div class="caption">
-        <p>A special moment, just the two of us.</p>
-      </div>
-    </div>
-    <div class="photo-item">
-      <img src="photo4.jpg" alt="Danica Mae Ronquillo - Photo 4" class="professional-img">
-      <div class="caption">
-        <p>My favorite place is wherever you are.</p>
-      </div>
-    </div>
-    <div class="photo-item">
-      <img src="photo5.jpg" alt="Danica Mae Ronquillo - Photo 5" class="professional-img">
-      <div class="caption">
-        <p>A beautiful moment together.</p>
-      </div>
-    </div>
-    <div class="photo-item">
-      <img src="photo6.jpg" alt="Danica Mae Ronquillo - Photo 6" class="professional-img">
-      <div class="caption">
-        <p>Laughter and joy, always.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- Milestones Section -->
+    <!-- Photo Gallery Section -->
+    <section id="gallery">
+      <h2>Photo Gallery</h2>
+      <div class="photo-grid">
+        <!-- 7 Photo Items -->
+        <div class="photo-item">
+          <img src="photo1.jpg" alt="Special Memory 1">
+          <div class="caption">Our beginning, forever cherished.</div>
+        </div>
+        <div class="photo-item">
+          <img src="photo2.jpg" alt="Special Memory 2">
+          <div class="caption">First smiles, lasting forever.</div>
+        </div>
+        <div class="photo-item">
+          <img src="photo3.jpg" alt="Special Memory 3">
+          <div class="caption">Laughter shared endlessly.</div>
+        </div>
+        <div class="photo-item">
+          <img src="photo4.jpg" alt="Special Memory 4">
+          <div class="caption">A journey of love begins.</div>
+        </div>
+        <div class="photo-item">
+          <img src="photo5.jpg" alt="Special Memory 5">
+          <div class="caption">Every moment is magic.</div>
+        </div>
+        <div class="photo-item">
+          <img src="photo6.jpg" alt="Special Memory 6">
+          <div class="caption">Together, we shine brighter.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tap to See Cute Couple -->
+    <section id="tap-to-see">
+      <button id="showImageButton" class="cute-button">Tap to see cute couple</button>
+      <div id="cuteCoupleImage" class="hidden">
+        <img src="couple-photo.jpg" alt="Cute Couple" class="pop-image">
+      </div>
+    </section>
+
+    <!-- Milestones Section -->
     <section id="milestones">
       <h2>Milestones</h2>
       <div class="milestone-container">
         <div class="milestone-item">
-          <img src="heart-icon.png" alt="Heart Icon" class="milestone-icon">
           <h3>First Meeting</h3>
           <p>August 9, 2022</p>
         </div>
         <div class="milestone-item">
-          <img src="heart-icon.png" alt="Heart Icon" class="milestone-icon">
           <h3>First Date</h3>
           <p>January 4, 2023</p>
         </div>
         <div class="milestone-item">
-          <img src="heart-icon.png" alt="Heart Icon" class="milestone-icon">
-          <h3>Special Moment</h3>
-          <p>Every time I'm with you.</p>
-        </div>
-        <div class="milestone-item">
-          <img src="heart-icon.png" alt="Heart Icon" class="milestone-icon">
           <h3>Anniversary</h3>
           <p>August 9, 2023</p>
         </div>
@@ -101,21 +91,15 @@
     <!-- Love Notes Section -->
     <section id="notes">
       <h2>Love Notes</h2>
-      <div class="note-container">
-        <p class="love-note">
-          To My Dearest Danica Mae Ronquillo,<br><br>
-          From the very first moment we met, I knew my life was about to change in the most beautiful way. 
-          Every laugh we share, every smile you give me, fills my heart with more love than I ever thought possible. 
-          You are not just the love of my life, but my best friend, my confidant, and the one I want to walk through 
-          this world with forever.<br><br>
-          In your eyes, I see my future, bright and full of joy. With every step we take together, 
-          I feel like the luckiest person alive. Thank you for being the amazing person you are—kind, loving, 
-          strong, and beautiful inside and out.<br><br>
-          This is just the beginning of a beautiful journey, and I promise to cherish every moment with you. 
-          No matter where life takes us, I will always hold you close in my heart.<br><br>
-          Forever yours, <br> Palangga
-        </p>
-      </div>
+      <p class="love-note">
+        To My Dearest Danica Mae Ronquillo,<br><br>
+        From the very first moment we met, my life changed in the most beautiful way. 
+        Every laugh we share, every smile you give me, fills my heart with love. 
+        You are my best friend, my partner, and my forever.<br><br>
+        With you, every moment feels like a fairytale. You are my sunshine, 
+        my calm, and my greatest adventure. Thank you for being my everything.<br><br>
+        Forever yours,<br> Palangga
+      </p>
     </section>
   </main>
 
