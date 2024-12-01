@@ -81,11 +81,54 @@ header p {
   100% { transform: scale(1); opacity: 1; }
 }
 
+/* Photo Gallery */
+#gallery .photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.photo-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.photo-item:hover {
+  transform: scale(1.05);
+}
+
+.professional-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.photo-item:hover .caption {
+  opacity: 1;
+}
+
 /* Milestones Section */
 #milestones {
-  padding: 20px;
+  padding: 40px 20px;
   margin: 20px auto;
-  max-width: 800px;
+  max-width: 1000px;
   text-align: center;
   opacity: 0;
   animation: fadeIn 2s forwards 2.5s;
@@ -93,58 +136,51 @@ header p {
 
 .milestone-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .milestone-item {
-  background-color: #ffb6c1;
-  padding: 20px;
-  border-radius: 10px;
-  width: 200px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
 .milestone-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+.milestone-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
 }
 
 .milestone-item h3 {
   font-size: 1.5em;
-  color: #ff69b4;
+  color: #ff1493;
 }
 
 .milestone-item p {
   font-size: 1.1em;
-}
-
-.milestone-icon {
-  width: 40px;
-  margin-bottom: 10px;
-  animation: bounce 1s infinite;
-}
-
-/* Bounce Animation for Icon */
-@keyframes bounce {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  color: #555;
 }
 
 /* Love Notes Section */
 #notes {
-  padding: 20px;
+  padding: 40px 20px;
   margin: 20px auto;
-  max-width: 800px;
+  max-width: 1000px;
   text-align: center;
   opacity: 0;
   animation: fadeIn 2s forwards 3s;
 }
 
+/* Footer */
 footer {
   background: #f4f4f4;
   text-align: center;
