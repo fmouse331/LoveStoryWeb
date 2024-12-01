@@ -204,40 +204,99 @@ header p {
 /* Love Notes Section */
 #notes {
   padding: 40px 20px;
-  background-color: #fff0f6; /* Soft pink background to match the romantic theme */
+  background: linear-gradient(135deg, #ffccff, #ff99cc); /* Soft pink gradient background */
   max-width: 800px;
   margin: 0 auto;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
   font-size: 1.2em;
   text-align: center;
-  line-height: 1.6;
-  overflow: hidden; /* Prevent content overflow */
-  min-height: 300px; /* Ensure there's always space */
+  line-height: 1.8;
+  overflow: hidden;
+  min-height: 350px;
+  position: relative;
+  animation: fadeIn 2s ease-out; /* Fade-in effect */
 }
 
-/* Adjust the text styling */
-#notes h2 {
-  font-size: 2.5em;
-  color: #ff1493;
-  margin-bottom: 20px;
+/* Add heart animation for romantic touch */
+.heart-animation {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  animation: floatHearts 3s infinite ease-in-out;
 }
 
-#notes p {
-  color: #555;
-  font-family: 'Georgia', serif; /* Elegant and readable font for the note */
-  white-space: pre-wrap; /* Allows text to break correctly */
-  word-wrap: break-word;
-  margin-top: 20px;
+.heart-icon {
+  width: 50px;
+  height: 50px;
+  animation: heartBeat 1s infinite; /* Pulse animation for the heart */
 }
 
-/* Add scroll on small screens for better usability */
-@media (max-width: 768px) {
-  #notes p {
-    font-size: 1em; /* Slightly reduce the font size for small screens */
-    padding: 20px; /* Add some padding for mobile devices */
+/* Fade-in effect for Love Notes */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Heart animation (floating effect) */
+@keyframes floatHearts {
+  0% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.8;
   }
 }
+
+/* Pulse animation for heart icon */
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2); /* Pulse effect */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Add glow effect on text */
+.love-note {
+  color: #ff1493;
+  font-family: 'Dancing Script', cursive; /* Elegant cursive font */
+  font-size: 1.3em;
+  text-shadow: 0 0 10px rgba(255, 20, 147, 0.6), 0 0 20px rgba(255, 20, 147, 0.6); /* Soft glow effect */
+  animation: glow 3s ease-in-out infinite alternate; /* Glow effect */
+}
+
+/* Glowing text animation */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 20, 147, 0.6), 0 0 20px rgba(255, 20, 147, 0.6);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 20, 147, 0.9), 0 0 30px rgba(255, 20, 147, 0.9);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 20, 147, 0.6), 0 0 20px rgba(255, 20, 147, 0.6);
+  }
+}
+
+/* Adjust text for small screens */
+@media (max-width: 768px) {
+  #notes p {
+    font-size: 1em; /* Smaller font size for mobile */
+    padding: 20px;
+  }
+}
+
 
 
 /* Fade-in Keyframes */
