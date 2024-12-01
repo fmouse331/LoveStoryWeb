@@ -163,7 +163,7 @@ body {
 /* Hidden Elements */
 .hidden {
   display: none;
-  }
+}
 .pop-image {
   width: 100%;
   max-width: 600px;
