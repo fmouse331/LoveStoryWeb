@@ -20,5 +20,4 @@ const cuteCoupleImage = document.getElementById("cuteCoupleImage");
 
 showImageButton.addEventListener("click", () => {
   cuteCoupleImage.classList.toggle("hidden");
-  cuteCoupleImage.style.display = cuteCoupleImage.style.display === "block" ? "none" : "block";
 });
