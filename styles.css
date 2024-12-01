@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
-  background-color: #fff4f8;
+  background-color: #fff5f8;
   line-height: 1.6;
   animation: fadeIn 2s ease-in-out;
 }
@@ -21,11 +21,18 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(to right, #ffb6c1, #ffc0cb), url('background.jpg') no-repeat center center/cover;
   text-align: center;
-  color: white;
-  padding: 50px 20px;
-  animation: fadeIn 2s ease-in-out;
+  padding: 50px;
+  background: linear-gradient(135deg, #ffcccb, #ffebcd);
+  font-family: 'Pacifico', cursive;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
 }
 
 /* Love Story Section */
@@ -137,25 +144,26 @@ body {
   margin: 20px 0;
 }
 
+/* Cute Button */
 .cute-button {
-  background: linear-gradient(to right, #ff69b4, #ff1493);
+  background-color: #ff6699;
   color: white;
-  padding: 15px 30px;
-  border-radius: 25px;
-  font-size: 1.2em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
 }
 
 .cute-button:hover {
-  transform: scale(1.1);
+  background-color: #ff3366;
 }
 
+/* Hidden Elements */
 .hidden {
   display: none;
-}
-
+  }
 .pop-image {
   width: 100%;
   max-width: 600px;
