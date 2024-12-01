@@ -160,17 +160,6 @@ body {
   background-color: #ff3366;
 }
 
-/* Hidden Elements */
-.hidden {
-  display: none;
-}
-.pop-image {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
 /* Animation for the Cute Couple Section */
 @keyframes fadeIn {
   0% {
@@ -192,6 +181,17 @@ body {
     opacity: 0;
     transform: scale(0.8);
   }
+}
+
+/* Hidden Elements */
+.hidden {
+  display: none;
+}
+.pop-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Hidden Class Updated for Smooth Animation */
