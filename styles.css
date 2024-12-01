@@ -1,11 +1,16 @@
-/* Basic Reset */
-body {
-  font-family: Arial, sans-serif;
+/* Reset Styles */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f9;
   color: #333;
-  background-color: #f0f0f0; /* Light background color */
-  transition: background-color 0.5s ease; /* Smooth transition for background color */
+  line-height: 1.6;
 }
 
 /* Hero Section */
@@ -13,133 +18,184 @@ body {
   background: url('background.jpg') no-repeat center center/cover;
   text-align: center;
   color: white;
-  padding: 50px 20px;
-  height: 100vh; /* Full viewport height */
+  padding: 100px 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   opacity: 0;
-  animation: fadeIn 2s forwards; /* Fade in effect for hero section */
+  animation: fadeIn 2s forwards;
 }
 
-header h1 {
-  font-size: 3em;
-  opacity: 0;
-  animation: fadeIn 2s forwards 0.5s; /* Delay the header animation */
+.hero h1 {
+  font-size: 4em;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-top: 10px;
 }
 
 /* Our Love Story Section */
 #story {
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 800px;
+  padding: 40px 20px;
   text-align: center;
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   opacity: 0;
-  animation: fadeIn 2s forwards 1s; /* Delay for smooth appearance */
+  animation: fadeIn 2s forwards 1s;
 }
 
-/* Photo Gallery */
-#gallery .photo-grid {
+#story h2 {
+  font-size: 2.5em;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#story p {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+/* Photo Gallery Section */
+#gallery {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: white;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeIn 2s forwards 2s;
+}
+
+#gallery h2 {
+  font-size: 2.5em;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.photo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .photo-item {
   position: relative;
   overflow: hidden;
-  opacity: 0;
-  animation: fadeIn 2s forwards 1.5s; /* Delayed fade-in for images */
-}
-
-#gallery img {
-  width: 100%;
-  height: auto; /* Ensure the aspect ratio is maintained */
   border-radius: 10px;
-  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth zoom and filter transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#gallery img:hover {
-  transform: scale(1.05); /* Slight zoom effect */
-  filter: brightness(1.2); /* Slightly brighten the image on hover */
+.photo-item img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* Caption Styling */
+.photo-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.photo-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
 .caption {
   position: absolute;
   bottom: 10px;
   left: 10px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  padding: 5px;
-  border-radius: 5px;
+  padding: 5px 10px;
   font-size: 14px;
+  border-radius: 5px;
   opacity: 0;
-  transition: opacity 0.3s ease; /* Smooth transition for caption appearance */
+  transition: opacity 0.3s ease;
 }
 
 .photo-item:hover .caption {
   opacity: 1;
 }
 
-/* Milestones and Love Notes Sections */
-#milestones, #notes {
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 800px;
+/* Milestones Section */
+#milestones {
+  padding: 40px 20px;
   text-align: center;
+  background-color: white;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   opacity: 0;
-  animation: fadeIn 2s forwards 2s; /* Delayed fade-in */
+  animation: fadeIn 2s forwards 3s;
 }
 
+#milestones h2 {
+  font-size: 2.5em;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#milestones ul {
+  list-style-type: none;
+}
+
+#milestones li {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+/* Love Notes Section */
+#notes {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: white;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeIn 2s forwards 4s;
+}
+
+#notes h2 {
+  font-size: 2.5em;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#notes p {
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 1.8;
+  white-space: pre-line; /* Keeps newlines in the love note text */
+}
+
+/* Footer */
 footer {
-  background: #f4f4f4;
+  background-color: #333;
+  color: white;
   text-align: center;
-  padding: 10px;
+  padding: 20px 10px;
+  font-size: 1.1em;
+  position: relative;
+  bottom: 0;
+  width: 100%;
   opacity: 0;
-  animation: fadeIn 2s forwards 2.5s; /* Delayed fade-in for footer */
+  animation: fadeIn 2s forwards 5s;
 }
 
-/* Fade-in Keyframes */
+/* Fade-in Animation */
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2em; /* Adjusted size for smaller screens */
-  }
-
-  .hero {
-    padding: 30px 10px; /* Reduced padding for mobile */
-  }
-
-  #story, #milestones, #notes {
-    padding: 15px; /* Reduced padding for mobile */
-  }
-
-  .photo-grid {
-    grid-template-columns: 1fr; /* Stack images vertically on mobile */
-  }
-
-  .caption {
-    font-size: 12px; /* Smaller caption text on mobile */
-  }
-}
-
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #333; /* Dark background color */
-    color: #fff; /* Light text color */
-  }
-
-  .hero {
-    background: url('background.jpg') no-repeat center center/cover;
-    color: #fff; /* Ensure white text on dark background */
-  }
-
-  footer {
-    background: #444; /* Dark footer background for dark mode */
-    color: #fff; /* Light text in footer */
-  }
 }
