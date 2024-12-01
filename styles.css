@@ -221,14 +221,14 @@ header p {
 /* Add heart animation for romantic touch */
 .heart-animation {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  animation: floatHearts 3s infinite ease-in-out;
+  bottom: 10px; /* Move heart closer to the bottom */
+  right: 10px; /* Move heart closer to the right */
+  animation: floatHearts 4s infinite ease-in-out; /* Slow down the floating effect */
 }
 
 .heart-icon {
-  width: 50px;
-  height: 50px;
+  width: 35px; /* Adjusted size to make it smaller */
+  height: 35px; /* Adjusted size to make it smaller */
   animation: heartBeat 1s infinite; /* Pulse animation for the heart */
 }
 
@@ -245,7 +245,7 @@ header p {
     opacity: 0.8;
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-10px); /* Reduced floating height */
     opacity: 1;
   }
   100% {
@@ -296,8 +296,6 @@ header p {
     padding: 20px;
   }
 }
-
-
 
 /* Fade-in Keyframes */
 @keyframes fadeIn {
