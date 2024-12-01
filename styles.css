@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
-  background-color: #fdf0f6; /* Soft pastel background for a romantic feel */
+  background-color: #fdf0f6;
   line-height: 1.6;
 }
 
@@ -14,22 +14,6 @@ body {
   text-align: center;
   color: white;
   padding: 50px 20px;
-  opacity: 0;
-  animation: fadeIn 2s forwards;
-}
-
-header h1 {
-  font-family: 'Pacifico', cursive; /* Fun, romantic font for header */
-  font-size: 3.5em;
-  opacity: 0;
-  animation: fadeIn 2s forwards 0.5s;
-}
-
-header p {
-  font-size: 1.5em;
-  opacity: 0;
-  animation: fadeIn 2s forwards 1s;
-  font-style: italic;
 }
 
 /* Our Love Story Section */
@@ -38,210 +22,75 @@ header p {
   margin: 20px auto;
   max-width: 800px;
   text-align: center;
-  opacity: 0;
-  animation: fadeIn 2s forwards 1.5s;
   font-size: 1.3em;
 }
 
 /* Photo Gallery */
 #gallery {
   padding: 40px 20px;
-  background-color: #fff0f6; /* Light pink background to match the romantic theme */
-}
-
-#gallery h2 {
-  font-size: 2.5em;
-  text-align: center;
-  color: #ff1493;
-  margin-bottom: 30px;
+  background-color: #fff0f6;
 }
 
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
-  justify-items: center;
 }
 
 .photo-item {
   position: relative;
   overflow: hidden;
-  border-radius: 15px; /* Rounded corners for a softer look */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.photo-item:hover {
-  transform: scale(1.05); /* Slight zoom effect */
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+  border-radius: 15px;
 }
 
 .professional-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure images cover the container */
-  border-radius: 15px;
-  transition: filter 0.3s ease; /* Transition for image filter */
+  object-fit: cover;
 }
 
-.photo-item:hover .professional-img {
-  filter: brightness(1.2); /* Slightly brighten the image on hover */
-}
-
-.caption {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-size: 1.2em;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  width: 90%;
-  text-align: center;
-}
-
-.photo-item:hover .caption {
-  opacity: 1; /* Show caption on hover */
-}
-
-@media (max-width: 768px) {
-  .photo-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust for smaller screens */
-  }
-
-  .caption {
-    font-size: 1em; /* Make caption text smaller on mobile */
-  }
-}
-
-
-/* Tap to See Cute Couple Section */
-#tap-to-see {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.cute-button {
-  background: linear-gradient(to right, #ff1493, #ffb6c1);
-  border: none;
-  color: white;
-  font-size: 1.4em;
-  padding: 15px 35px;
-  border-radius: 25px;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.cute-button:hover {
-  transform: scale(1.1);
-  background: linear-gradient(to right, #ff69b4, #ff1493);
-}
-
-.cute-button:focus {
-  outline: none;
-}
-
-/* Image Pop-up */
-#cuteCoupleImage {
-  margin-top: 20px;
+/* Modal Styles */
+.modal {
   display: none;
-  text-align: center;
-}
-
-.pop-image {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 600px;
-  border-radius: 20px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  animation: popIn 1s ease-out;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Milestone Section */
-#milestones {
-  padding: 40px 20px;
-  background-color: #fff0f6;
-}
-
-.milestone-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.milestone-item {
-  padding: 20px;
-  background-color: #ffebf0;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.milestone-item:hover {
-  transform: scale(1.05);
-}
-
-.milestone-icon {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 15px;
-}
-
-.milestone-item h3 {
-  font-size: 1.5em;
-  color: #ff1493;
-}
-
-.milestone-item p {
-  font-size: 1.2em;
-  color: #555;
-}
-
-/* Love Notes Section */
-#notes {
-  padding: 40px 20px;
-  background: linear-gradient(135deg, #ffccff, #ff99cc); /* Soft pink gradient background */
-  max-width: 800px;
-  margin: 20px auto;
+.modal-content {
+  max-width: 80%;
+  max-height: 80%;
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  font-size: 1.2em;
+}
+
+.modal-caption {
+  color: white;
   text-align: center;
-  line-height: 1.8;
-  min-height: 350px;
-  position: relative;
-  animation: fadeIn 2s ease-out; /* Fade-in effect */
 }
 
-/* Love Notes Text Styling */
-.love-note {
-  color: #ff1493;
-  font-family: 'Dancing Script', cursive; /* Elegant cursive font */
-  font-size: 1.3em;
-  text-shadow: 0 0 10px rgba(255, 20, 147, 0.6), 0 0 20px rgba(255, 20, 147, 0.6); /* Soft glow effect */
-  animation: glow 3s ease-in-out infinite alternate; /* Glow effect */
+#modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
 }
 
-/* Fade-in Keyframes */
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes popIn {
-  0% { transform: scale(0.8); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-/* Footer */
-footer {
-  background-color: #f4f4f4;
-  padding: 15px;
-  text-align: center;
-  font-size: 1.2em;
-  color: #333;
+/* Music Control */
+.music-control {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: #ff1493;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
 }
