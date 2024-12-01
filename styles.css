@@ -30,57 +30,55 @@ header p {
   animation: fadeIn 2s forwards 1s;
 }
 
-/* Our Love Story Section */
-#story {
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 800px;
+/* Tap to See Section */
+#tap-to-see {
   text-align: center;
-  opacity: 0;
-  animation: fadeIn 2s forwards 1.5s;
+  margin-top: 30px;
 }
 
-/* Photo Gallery */
-#gallery .photo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
-}
-
-.photo-item {
-  position: relative;
-  overflow: hidden;
-  opacity: 0;
-  animation: fadeIn 2s forwards 2s;
-}
-
-#gallery img {
-  width: 100%;
-  border-radius: 10px;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-#gallery img:hover {
-  transform: scale(1.05);
-  filter: brightness(1.2);
-}
-
-/* Caption Styling */
-.caption {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
+.cute-button {
+  background: linear-gradient(to right, #ff69b4, #ffb6c1);
+  border: none;
   color: white;
-  padding: 5px;
-  border-radius: 5px;
-  font-size: 14px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  font-size: 1.2em;
+  padding: 15px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.photo-item:hover .caption {
-  opacity: 1;
+.cute-button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to right, #ff1493, #ff69b4);
+}
+
+.cute-button:focus {
+  outline: none;
+}
+
+/* Image Pop-up */
+#cuteCoupleImage {
+  margin-top: 20px;
+  display: none;
+}
+
+.pop-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  animation: popIn 1s ease-out;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Pop-In Animation */
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
 /* Milestones Section */
