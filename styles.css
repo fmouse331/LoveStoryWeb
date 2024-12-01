@@ -1,22 +1,22 @@
-/* Reset Styles */
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Global Styles */
+/* Body */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f4f4f9;
+  background-color: #f0f8ff;
   color: #333;
   line-height: 1.6;
+  text-align: center;
 }
 
 /* Hero Section */
 .hero {
-  background: url('background.jpg') no-repeat center center/cover;
-  text-align: center;
+  background: linear-gradient(45deg, #ff7f50, #ff69b4);
   color: white;
   padding: 100px 20px;
   height: 100vh;
@@ -24,39 +24,38 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  animation: fadeIn 2s forwards;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero h1 {
   font-size: 4em;
-  font-weight: 600;
+  font-family: 'Pacifico', cursive;
   margin-bottom: 20px;
+  color: #fff;
 }
 
 .hero p {
   font-size: 1.5em;
   font-weight: 300;
-  margin-top: 10px;
+  color: #fff;
 }
 
 /* Our Love Story Section */
 #story {
   padding: 40px 20px;
-  text-align: center;
   max-width: 800px;
   margin: 50px auto;
-  background-color: white;
+  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  animation: fadeIn 2s forwards 1s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #ff7f50;
 }
 
 #story h2 {
   font-size: 2.5em;
   font-weight: 600;
   margin-bottom: 20px;
+  color: #ff69b4;
 }
 
 #story p {
@@ -67,19 +66,18 @@ body {
 /* Photo Gallery Section */
 #gallery {
   padding: 40px 20px;
-  text-align: center;
-  background-color: white;
+  background-color: #fff;
   margin: 50px auto;
+  max-width: 1200px;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  animation: fadeIn 2s forwards 2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 #gallery h2 {
   font-size: 2.5em;
   font-weight: 600;
   margin-bottom: 20px;
+  color: #ff7f50;
 }
 
 .photo-grid {
@@ -93,6 +91,7 @@ body {
   overflow: hidden;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .photo-item img {
@@ -103,7 +102,7 @@ body {
 
 .photo-item:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 .photo-item:hover img {
@@ -131,19 +130,18 @@ body {
 /* Milestones Section */
 #milestones {
   padding: 40px 20px;
-  text-align: center;
-  background-color: white;
+  background-color: #fff;
   margin: 50px auto;
+  max-width: 800px;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  animation: fadeIn 2s forwards 3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 #milestones h2 {
   font-size: 2.5em;
   font-weight: 600;
   margin-bottom: 20px;
+  color: #ff7f50;
 }
 
 #milestones ul {
@@ -153,49 +151,39 @@ body {
 #milestones li {
   font-size: 1.2em;
   margin: 10px 0;
+  color: #ff69b4;
 }
 
 /* Love Notes Section */
 #notes {
   padding: 40px 20px;
-  text-align: center;
-  background-color: white;
+  background-color: #fff;
   margin: 50px auto;
+  max-width: 800px;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  animation: fadeIn 2s forwards 4s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 #notes h2 {
   font-size: 2.5em;
   font-weight: 600;
   margin-bottom: 20px;
+  color: #ff7f50;
 }
 
 #notes p {
   font-size: 1.2em;
   font-weight: 300;
   line-height: 1.8;
-  white-space: pre-line; /* Keeps newlines in the love note text */
 }
 
 /* Footer */
 footer {
-  background-color: #333;
+  background-color: #ff69b4;
   color: white;
   text-align: center;
-  padding: 20px 10px;
-  font-size: 1.1em;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  opacity: 0;
-  animation: fadeIn 2s forwards 5s;
-}
-
-/* Fade-in Animation */
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  padding: 20px;
+  font-size: 1.2em;
+  margin-top: 50px;
+  border-radius: 10px;
 }
