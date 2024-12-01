@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To Danica Mae Ronquillo, My Love</title>
-  <!-- Updated Romantic Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Merriweather:wght@400;700&family=Roboto:wght@400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Background Music -->
-  <audio autoplay loop>
+  <audio id="background-music" loop>
     <source src="music.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
+  <button id="music-toggle" class="music-control">Play Music</button>
 
   <!-- Hero Section -->
   <header class="hero">
@@ -21,11 +21,13 @@
     <p>Every moment with you is a treasure.</p>
   </header>
 
-  <!-- Our Love Story Section -->
-  <section id="story">
-    <h2>Our Love Story</h2>
-    <p>From the moment we met, my life changed forever...</p>
-  </section>
+  <!-- Main Content -->
+  <main>
+    <!-- Our Love Story Section -->
+    <section id="story">
+      <h2>Our Love Story</h2>
+      <p>From the moment we met, my life changed forever...</p>
+    </section>
 
   <!-- Photo Gallery Section -->
 <section id="gallery">
@@ -70,65 +72,37 @@
   </div>
 </section>
 
-  <!-- Tap to See Cute Couple Button -->
-  <section id="tap-to-see">
-    <button id="showImageButton" class="cute-button">Tap to see cute couple</button>
-    <div id="cuteCoupleImage" class="hidden">
-      <img src="couple-photo.jpg" alt="Cute Couple" class="pop-image">
-    </div>
-  </section>
+ <!-- Milestones Section -->
+    <section id="milestones">
+      <h2>Milestones</h2>
+      <div class="milestone-container">
+        <div class="milestone-item">
+          <img src="heart-icon.png" alt="Heart Icon" class="milestone-icon">
+          <h3>First Meeting</h3>
+          <p>August 9, 2022</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Milestones Section -->
-  <section id="milestones">
-    <h2>Milestones</h2>
-    <div class="milestone-container">
-      <div class="milestone-item">
-        <img src="heart-icon.png" alt="Heart Icon" class="milestone-icon">
-        <h3>First Meeting</h3>
-        <p>August 9, 2022</p>
-      </div>
-      <div class="milestone-item">
-        <img src="heart-icon.png" alt="Heart Icon" class="milestone-icon">
-        <h3>First Date</h3>
-        <p>January 4, 2023</p>
-      </div>
-      <div class="milestone-item">
-        <img src="heart-icon.png" alt="Heart Icon" class="milestone-icon">
-        <h3>Special Moment</h3>
-        <p>Every time I'm with you.</p>
-      </div>
-    </div>
-  </section>
+    <!-- Love Notes Section -->
+    <section id="notes">
+      <h2>Love Notes</h2>
+      <p class="love-note">To My Dearest Danica...</p>
+    </section>
+  </main>
 
-  <!-- Love Notes Section -->
-  <section id="notes">
-    <h2>Love Notes</h2>
-    <p class="love-note">
-      To My Dearest Danica Mae Ronquillo,
-      <br><br>
-      From the very first moment we met, I knew my life was about to change in the most beautiful way. Every laugh we share, every smile you give me, fills my heart with more love than I ever thought possible. You are not just the love of my life, but my best friend, my confidant, and the one I want to walk through this world with forever.
-      <br><br>
-      In your eyes, I see my future, bright and full of joy. With every step we take together, I feel like the luckiest person alive. Thank you for being the amazing person you are—kind, loving, strong, and beautiful inside and out.
-      <br><br>
-      This is just the beginning of a beautiful journey, and I promise to cherish every moment with you. No matter where life takes us, I will always hold you close in my heart.
-      <br><br>
-      Forever yours, <br>
-      Palangga
-    </p>
-  </section>
-  
+  <!-- Modal for Photos -->
+  <div id="photo-modal" class="modal hidden">
+    <span id="modal-close">&times;</span>
+    <img id="modal-image" class="modal-content">
+    <div id="modal-caption"></div>
+  </div>
+
   <!-- Footer -->
   <footer>
     <p>Made with love for Danica Mae Ronquillo</p>
   </footer>
 
-  <!-- JavaScript for Tap to See Image -->
-  <script>
-    document.getElementById("showImageButton").addEventListener("click", function() {
-      const image = document.getElementById("cuteCoupleImage");
-      image.classList.remove("hidden");
-      image.style.display = "block";
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
