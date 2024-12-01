@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
+  background-color: #f0f0f0; /* Light background color */
   transition: background-color 0.5s ease; /* Smooth transition for background color */
 }
 
@@ -13,6 +14,7 @@ body {
   text-align: center;
   color: white;
   padding: 50px 20px;
+  height: 100vh; /* Full viewport height */
   opacity: 0;
   animation: fadeIn 2s forwards; /* Fade in effect for hero section */
 }
@@ -49,6 +51,7 @@ header h1 {
 
 #gallery img {
   width: 100%;
+  height: auto; /* Ensure the aspect ratio is maintained */
   border-radius: 10px;
   transition: transform 0.3s ease, filter 0.3s ease; /* Smooth zoom and filter transition */
 }
@@ -98,4 +101,45 @@ footer {
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em; /* Adjusted size for smaller screens */
+  }
+
+  .hero {
+    padding: 30px 10px; /* Reduced padding for mobile */
+  }
+
+  #story, #milestones, #notes {
+    padding: 15px; /* Reduced padding for mobile */
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr; /* Stack images vertically on mobile */
+  }
+
+  .caption {
+    font-size: 12px; /* Smaller caption text on mobile */
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+  }
+
+  .hero {
+    background: url('background.jpg') no-repeat center center/cover;
+    color: #fff; /* Ensure white text on dark background */
+  }
+
+  footer {
+    background: #444; /* Dark footer background for dark mode */
+    color: #fff; /* Light text in footer */
+  }
 }
