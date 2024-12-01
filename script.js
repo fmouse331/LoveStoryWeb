@@ -14,10 +14,19 @@ musicToggle.addEventListener("click", () => {
   isPlaying = !isPlaying;
 });
 
-// Tap to See Cute Couple
-const showImageButton = document.getElementById("showImageButton");
-const cuteCoupleImage = document.getElementById("cuteCoupleImage");
+// Scroll Animation for Photo Gallery
+const photoItems = document.querySelectorAll(".photo-item");
 
-showImageButton.addEventListener("click", () => {
-  cuteCoupleImage.classList.toggle("hidden");
-});
+const handleScroll = () => {
+  const triggerPoint = window.innerHeight * 0.8; // 80% of the viewport height
+  photoItems.forEach((item) => {
+    const itemTop = item.getBoundingClientRect().top;
+    if (itemTop < triggerPoint) {
+      item.classList.add("show");
+    } else {
+      item.classList.remove("show");
+    }
+  });
+};
+
+window.addEventListener("scroll", handleScroll);
