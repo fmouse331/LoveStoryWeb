@@ -1,179 +1,134 @@
-/* Base Styles */
-* {
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Sacramento&display=swap');
+
+/* Basic Reset */
+body {
+  font-family: 'Great Vibes', cursive; /* Romantic font for body text */
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f9f9f9;
   color: #333;
-  line-height: 1.6;
+  transition: background-color 0.5s ease;
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #ff7f50, #ff69b4);
+  background: linear-gradient(to right, rgba(255, 182, 193, 0.5), rgba(255, 105, 180, 0.5)), url('background.jpg') no-repeat center center/cover;
+  text-align: center;
   color: white;
-  text-align: center;
   padding: 50px 20px;
-  border-bottom: 10px solid #ff69b4;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
 }
 
-.hero h1 {
+header h1 {
+  font-family: 'Montserrat', sans-serif; /* Keep header font */
   font-size: 3em;
-  margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeIn 2s forwards 0.5s;
 }
 
-.hero p {
-  font-size: 1.2em;
-  font-weight: 300;
+header p {
+  font-size: 1.5em;
+  opacity: 0;
+  animation: fadeIn 2s forwards 1s;
 }
 
-/* Story Section */
+/* Our Love Story Section */
 #story {
-  padding: 30px 20px;
+  font-family: 'Dancing Script', cursive; /* Romantic script font */
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
   text-align: center;
-  background-color: #ffffff;
+  opacity: 0;
+  animation: fadeIn 2s forwards 1.5s;
 }
 
-#story h2 {
-  font-size: 2.5em;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #ff7f50;
-}
-
-#story p {
-  font-size: 1.2em;
-  color: #555;
-}
-
-/* Gallery Section */
-#gallery {
-  padding: 30px 20px;
-}
-
-#gallery h2 {
-  text-align: center;
-  font-size: 2.5em;
-  color: #ff7f50;
-  margin-bottom: 20px;
-}
-
-.photo-grid {
+/* Photo Gallery */
+#gallery .photo-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
 }
 
 .photo-item {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeIn 2s forwards 2s;
 }
 
-.photo-item img {
+#gallery img {
   width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
+  border-radius: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.photo-item img:hover {
-  transform: scale(1.1);
+#gallery img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
 }
 
+/* Caption Styling */
 .caption {
   position: absolute;
   bottom: 10px;
   left: 10px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  padding: 10px;
-  font-size: 1.1em;
+  padding: 5px;
   border-radius: 5px;
+  font-size: 14px;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s ease;
 }
 
 .photo-item:hover .caption {
   opacity: 1;
 }
 
-/* Milestones Section */
-#milestones {
-  padding: 30px 20px;
-  background-color: #fff;
-  margin-top: 50px;
-}
-
-#milestones h2 {
-  font-size: 2.5em;
-  font-weight: 600;
+/* Milestones and Love Notes Sections */
+#milestones, #notes {
+  font-family: 'Sacramento', cursive; /* Romantic cursive font */
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
   text-align: center;
-  color: #ff7f50;
-  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 2s forwards 2.5s;
 }
 
 .milestone-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 30px;
+  justify-content: center;
 }
 
 .milestone-item {
-  background: #ffe6f2;
+  background-color: #ffb6c1;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
+  width: 200px;
   text-align: center;
-  transition: transform 0.3s ease;
 }
 
-.milestone-item:hover {
-  transform: scale(1.05);
+.milestone-item h3 {
+  font-size: 1.5em;
+  color: #ff69b4;
 }
 
-.milestone-icon img {
-  width: 50px;
-  height: 50px;
-}
-
-.milestone-text h3 {
-  font-size: 1.8em;
-  color: #ff7f50;
-  margin-bottom: 10px;
-}
-
-.milestone-text p {
+.milestone-item p {
   font-size: 1.2em;
-  color: #555;
+  color: #333;
 }
 
-/* Love Notes Section */
-#notes {
-  padding: 30px 20px;
-  background-color: #ffffff;
-  text-align: center;
-}
-
-#notes h2 {
-  font-size: 2.5em;
-  font-weight: 600;
-  color: #ff7f50;
-  margin-bottom: 20px;
-}
-
+/* Love Notes */
 #notes p {
-  font-size: 1.2em;
-  color: #555;
+  font-size: 1.3em;
+  line-height: 1.8;
   max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
+  margin: 20px auto;
 }
 
 /* Footer */
@@ -188,6 +143,12 @@ footer {
 footer p {
   color: #ff7f50;
   font-size: 1.2em;
+}
+
+/* Fade-in Keyframes */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 /* Media Queries for Responsiveness */
