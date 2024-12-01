@@ -27,15 +27,15 @@
     <h2>Photo Gallery</h2>
     <div class="photo-grid">
       <div class="photo-item">
-        <img src="photo1.jpg" alt="Danica Mae Ronquillo - Photo 1">
+        <img src="photo1.jpg" alt="Danica Mae Ronquillo - Photo 1" class="professional-img">
         <p class="caption">The day we met, forever in my heart.</p>
       </div>
       <div class="photo-item">
-        <img src="photo2.jpg" alt="Danica Mae Ronquillo - Photo 2">
+        <img src="photo2.jpg" alt="Danica Mae Ronquillo - Photo 2" class="professional-img">
         <p class="caption">Our first date - a moment I'll never forget.</p>
       </div>
       <div class="photo-item">
-        <img src="photo3.jpg" alt="Danica Mae Ronquillo - Photo 3">
+        <img src="photo3.jpg" alt="Danica Mae Ronquillo - Photo 3" class="professional-img">
         <p class="caption">A special moment, just the two of us.</p>
       </div>
     </div>
@@ -83,6 +83,13 @@
     <p>Made with love for Danica Mae Ronquillo</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- JavaScript -->
+  <script>
+    document.getElementById("showImageButton").addEventListener("click", function() {
+      const image = document.getElementById("cuteCoupleImage");
+      image.classList.remove("hidden");
+      image.style.display = "block";
+    });
+  </script>
 </body>
 </html>
