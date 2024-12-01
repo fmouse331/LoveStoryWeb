@@ -12,11 +12,13 @@ musicToggle.addEventListener('click', () => {
   }
 });
 
-// Show Cute Couple Image
+// Select elements
 const showImageButton = document.getElementById('showImageButton');
 const cuteCoupleImage = document.getElementById('cuteCoupleImage');
 
+// Add event listener to the button
 showImageButton.addEventListener('click', () => {
+  // Toggle the 'hidden' class
   cuteCoupleImage.classList.toggle('hidden');
 });
 
