@@ -206,95 +206,24 @@ header p {
   padding: 40px 20px;
   background: linear-gradient(135deg, #ffccff, #ff99cc); /* Soft pink gradient background */
   max-width: 800px;
-  margin: 0 auto;
+  margin: 20px auto;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
   font-size: 1.2em;
   text-align: center;
   line-height: 1.8;
-  overflow: hidden;
   min-height: 350px;
   position: relative;
   animation: fadeIn 2s ease-out; /* Fade-in effect */
 }
 
-/* Add heart animation for romantic touch */
-.heart-animation {
-  position: absolute;
-  bottom: 10px; /* Move heart closer to the bottom */
-  right: 10px; /* Move heart closer to the right */
-  animation: floatHearts 4s infinite ease-in-out; /* Slow down the floating effect */
-}
-
-.heart-icon {
-  width: 35px; /* Adjusted size to make it smaller */
-  height: 35px; /* Adjusted size to make it smaller */
-  animation: heartBeat 1s infinite; /* Pulse animation for the heart */
-}
-
-/* Fade-in effect for Love Notes */
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-/* Heart animation (floating effect) */
-@keyframes floatHearts {
-  0% {
-    transform: translateY(0);
-    opacity: 0.8;
-  }
-  50% {
-    transform: translateY(-10px); /* Reduced floating height */
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 0.8;
-  }
-}
-
-/* Pulse animation for heart icon */
-@keyframes heartBeat {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2); /* Pulse effect */
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* Add glow effect on text */
+/* Love Notes Text Styling */
 .love-note {
   color: #ff1493;
   font-family: 'Dancing Script', cursive; /* Elegant cursive font */
   font-size: 1.3em;
   text-shadow: 0 0 10px rgba(255, 20, 147, 0.6), 0 0 20px rgba(255, 20, 147, 0.6); /* Soft glow effect */
   animation: glow 3s ease-in-out infinite alternate; /* Glow effect */
-}
-
-/* Glowing text animation */
-@keyframes glow {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 20, 147, 0.6), 0 0 20px rgba(255, 20, 147, 0.6);
-  }
-  50% {
-    text-shadow: 0 0 20px rgba(255, 20, 147, 0.9), 0 0 30px rgba(255, 20, 147, 0.9);
-  }
-  100% {
-    text-shadow: 0 0 10px rgba(255, 20, 147, 0.6), 0 0 20px rgba(255, 20, 147, 0.6);
-  }
-}
-
-/* Adjust text for small screens */
-@media (max-width: 768px) {
-  #notes p {
-    font-size: 1em; /* Smaller font size for mobile */
-    padding: 20px;
-  }
 }
 
 /* Fade-in Keyframes */
