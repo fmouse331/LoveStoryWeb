@@ -201,6 +201,45 @@ header p {
   color: #555;
 }
 
+/* Love Notes Section */
+#notes {
+  padding: 40px 20px;
+  background-color: #fff0f6; /* Soft pink background to match the romantic theme */
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  font-size: 1.2em;
+  text-align: center;
+  line-height: 1.6;
+  overflow: hidden; /* Prevent content overflow */
+  min-height: 300px; /* Ensure there's always space */
+}
+
+/* Adjust the text styling */
+#notes h2 {
+  font-size: 2.5em;
+  color: #ff1493;
+  margin-bottom: 20px;
+}
+
+#notes p {
+  color: #555;
+  font-family: 'Georgia', serif; /* Elegant and readable font for the note */
+  white-space: pre-wrap; /* Allows text to break correctly */
+  word-wrap: break-word;
+  margin-top: 20px;
+}
+
+/* Add scroll on small screens for better usability */
+@media (max-width: 768px) {
+  #notes p {
+    font-size: 1em; /* Slightly reduce the font size for small screens */
+    padding: 20px; /* Add some padding for mobile devices */
+  }
+}
+
+
 /* Fade-in Keyframes */
 @keyframes fadeIn {
   0% { opacity: 0; }
