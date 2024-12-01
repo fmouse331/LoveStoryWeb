@@ -1,0 +1,101 @@
+/* Basic Reset */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  transition: background-color 0.5s ease; /* Smooth transition for background color */
+}
+
+/* Hero Section */
+.hero {
+  background: url('background.jpg') no-repeat center center/cover;
+  text-align: center;
+  color: white;
+  padding: 50px 20px;
+  opacity: 0;
+  animation: fadeIn 2s forwards; /* Fade in effect for hero section */
+}
+
+header h1 {
+  font-size: 3em;
+  opacity: 0;
+  animation: fadeIn 2s forwards 0.5s; /* Delay the header animation */
+}
+
+/* Our Love Story Section */
+#story {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 2s forwards 1s; /* Delay for smooth appearance */
+}
+
+/* Photo Gallery */
+#gallery .photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.photo-item {
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeIn 2s forwards 1.5s; /* Delayed fade-in for images */
+}
+
+#gallery img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth zoom and filter transition */
+}
+
+#gallery img:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  filter: brightness(1.2); /* Slightly brighten the image on hover */
+}
+
+/* Caption Styling */
+.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Smooth transition for caption appearance */
+}
+
+.photo-item:hover .caption {
+  opacity: 1;
+}
+
+/* Milestones and Love Notes Sections */
+#milestones, #notes {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 2s forwards 2s; /* Delayed fade-in */
+}
+
+footer {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  animation: fadeIn 2s forwards 2.5s; /* Delayed fade-in for footer */
+}
+
+/* Fade-in Keyframes */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
